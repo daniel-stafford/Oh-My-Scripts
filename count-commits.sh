@@ -26,7 +26,7 @@ gitlog=$(git log --pretty="%an,")
 if [ "$#" -eq 0 ]; then
   for user in "${gitlog[@]}"; do
     echo "$user"
-  done | uniq -c | sort -nr | awk '{s=$1;$1=$NF;$NF=s}1' | sed 's/,/ -/g'
+  done | sort | uniq -c | sort -nr | awk '{s=$1;$1=$NF;$NF=s}1' | sed 's/,/ -/g'
 fi
 
 # function for looping with user arugments
