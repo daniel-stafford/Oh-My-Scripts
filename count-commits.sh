@@ -1,6 +1,7 @@
 #!/bin/bash
 
 OLDIFS=$IFS
+
 IFS=","
 
 if [ "$1" == "-h" ]; then
@@ -12,9 +13,8 @@ gitlog=$(git log --pretty="%an,")
 
 if [ "$#" -eq 0 ]; then
   for user in "${gitlog[@]}"; do
-    echo $user
-  done | sort | uniq -c | sort -nr
-  exit 0
+    echo "$user"
+  done | sort | uniq -c | sort -nr | awk '{s=$1;$1=$NF;$NF=s}1' | sed 's/,/ -/g'
 fi
 
 function loop_gitLog() {
