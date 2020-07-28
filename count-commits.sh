@@ -4,8 +4,6 @@
 # user arguments are provided.  If the "count-commits.sh dan" is provided, output will be dan: number of commits,
 # instead of danie-stafford: number of commits.
 
-# allow me to loop though the git log via comma delinator
-
 #provide instructor when users adds -h parameter
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   less <<EOF
