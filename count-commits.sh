@@ -4,12 +4,20 @@
 # user arguments are provided.  If the "count-commits.sh dan" is provided, output will be dan: number of commits,
 # instead of danie-stafford: number of commits.
 
+# allow me to loop though the git log via comma delinator
+
 #provide instructor when users adds -h parameter
-if [ "$1" == "-h" ]; then
-  echo "Usage: $(basename $0) If you run this script without arguments, output will be a
-  list of author names along with their number of commits.  If names of authors are provided
-  as arugments (write at least 3 characters per user name, which are case insensitive) output will
-  be only commits from those authors."
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+  less <<EOF
+Usage: $0 [options] | [authors]
+
+DESCRIPTION
+This script prints out names of committers along with number of commits
+
+OPTIONS
+-h | --help        Print out usage
+authors            List of author names separated by a space
+EOF
   exit 0
 fi
 
@@ -19,16 +27,14 @@ gitlog=$(git log --pretty="%an")
 # if no arguments, loop through git log, sort/count commits per user, format output as user - # of commits
 # Note: that awk word reversal came from stack overrflow, working on understanding it...
 if [ "$#" -eq 0 ]; then
-  for user in "${gitlog[@]}"; do
-    echo "$user"
-  done | sort | uniq -c | sort -nr | tac -s' ' | xargs #todo add dash between user name and number.
+  git --no-pager log --pretty=":%an" | sort | uniq -c | sort -nr | awk -F: '{sub(/[ ]*/,"",$1);print $NF" - "$1}' | less
 fi
 
 # function for looping with user arugments
 function loop_gitLog() {
   for user in "${gitlog[@]}"; do
     echo "$user"
-  done | grep -ic $1
+  done | grep -ic "$1"
   return 0
 }
 
@@ -40,9 +46,8 @@ for userArg in "$@"; do
     echo 'Please provide user names with at least 3 characters'
     exit 1
   else
-    result=$(loop_gitLog $userArg)
+    result=$(loop_gitLog "$userArg")
     echo "$userArg - $result"
+    exit 0
   fi
 done
-
-exit 0
