@@ -12,7 +12,7 @@ Move a dev dependency to product dependencies.
 
 ### iterm-panes.applescript
 
-Open up an iTerm with multiples panes and ru commands. Useful for running full-stack projects quickly.
+Open up an iTerm with multiples panes and run commands. Useful for running full-stack projects quickly.
 
 ### lidl-connect.applescript
 
