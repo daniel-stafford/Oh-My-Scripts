@@ -7,8 +7,8 @@ fi
 
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-echo "🤖🤖 $(tput setaf 6) Making sure your branch has the latest upstream changes 🤖🤖$(tput setaf 7)"
-git pull upstream develop
+echo "🤖🤖 $(tput setaf 6) Making sure your local branch has the latest changes from the develop branch 🤖🤖$(tput setaf 7)"
+git pull $1 develop
 
 echo "$(tput setaf 3) Checking for console.logs or display $(tput setaf 7)"
 SEARCH=$(grep -rE --include \*.ts --exclude-dir={node_modules,utils}  'console.log|display' . )
