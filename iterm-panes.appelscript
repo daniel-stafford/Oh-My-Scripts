@@ -1,0 +1,14 @@
+tell application "iTerm"
+	activate
+
+	set W to current window
+	if W = missing value then set W to create window with default profile
+	tell W's current session
+		split vertically with default profile
+		split vertically with default profile
+	end tell
+	set T to W's current tab
+	write T's session 1 text "echo "write a command for panel 1""
+	write T's session 2 text "echo "write a command for panel 2""
+	write T's session 3 text "echo "write a command for panel 3""
+end tell
