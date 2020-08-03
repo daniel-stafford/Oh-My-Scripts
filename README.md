@@ -6,6 +6,10 @@ Counting the number of Git commits for a user or get an overview of the number o
 
 Move a dev dependency to product dependencies
 
+### iterm-panes.applescript
+
+Open up an iTerm with multiples panes and ru commands. Useful for running full-stack projects quickly.
+
 ### lidl-connect.applescript
 
 Connect your bluetooth headphones to your MacBook without touching the mouse!
