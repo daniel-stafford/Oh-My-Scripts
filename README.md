@@ -1,3 +1,7 @@
+# Oh My Scripts!
+
+A collection of random scripts I've created to speed up my workflow. Feel free to use!  
+
 ### count-commits.sh
 
 Counting the number of Git commits for a user or get an overview of the number of commits for all users.
