@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Git Pull",
+      "type": "shell",
+      "command": "git pull upstream develop",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Run Dev Client",
+      "type": "shell",
+      "command": "npm start",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "dependsOn": ["Git Pull"]
+    }
+  ]
+}
