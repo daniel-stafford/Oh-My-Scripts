@@ -1,6 +1,6 @@
 # Oh My Scripts!
 
-A collection of random scripts I've created to speed up my workflow. Feel free to use!  
+A collection of random scripts I've created to speed up my workflow. Feel free to use!
 
 ### count-commits.sh
 
@@ -8,7 +8,7 @@ Counting the number of Git commits for a user or get an overview of the number o
 
 ### dev-to-prod.sh
 
-Move a dev dependency to product dependencies.  
+Move a dev dependency to product dependencies.
 
 ### iterm-panes.applescript
 
@@ -32,7 +32,7 @@ Simple script showing the read input function (demo for a colleague).
 
 ### tasks.json
 
-Assuming you use VSCode, place this tasks.json file inside your /.vscode folder (you may have to create it).  Now when opening up your workspace each time, vscode will automatically run git pull and npm start inside the integrated terminal.  Super cool!! 
+Assuming you use VSCode, place this tasks.json file inside your /.vscode folder (you may have to create it). Now when opening up your workspace each time, vscode will automatically run git pull and npm start inside the integrated terminal. Super cool!! Note: You many need to manually run the tasks once to get VSCode to run them automatically. Use the command pallette and write "Run Task" and run, say, Git Pull. VSCode should the ask if you want to give permission to automatically run tasks.json
 
 ### wifi-connect.applescript
 
