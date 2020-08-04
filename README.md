@@ -30,6 +30,10 @@ Before pushing a branch, checks if latest changes have been pulled, if console.l
 
 Simple script showing the read input function (demo for a colleague).
 
+### tasks.json
+
+Assuming you use VSCode, place this tasks.json file inside your /.vscode folder (you may have to create it).  Now when opening up your workspace each time, vscode will automatically run git pull and npm start inside the integrated terminal.  Super cool!! 
+
 ### wifi-connect.applescript
 
 Connect your wifi without touching the mouse!
