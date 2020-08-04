@@ -32,7 +32,7 @@ Simple script showing the read input function (demo for a colleague).
 
 ### tasks.json
 
-Assuming you use VSCode, place this tasks.json file inside your /.vscode folder (you may have to create it). Now when opening up your workspace each time, vscode will automatically run git pull and npm start inside the integrated terminal. Super cool!! Note: You many need to manually run the tasks once to get VSCode to run them automatically. Use the command pallette and write "Run Task" and run, say, Git Pull. VSCode should the ask if you want to give permission to automatically run tasks.json
+Assuming you use VSCode, place this tasks.json file inside your /.vscode folder (you may have to create it). Now when opening up your workspace each time, vscode will automatically pull for upstream changes, install any new modules, and then start the development client inside the integrated terminal. Super cool!! Note: You many need to manually run the tasks once to get VSCode to run them automatically. Use the command pallette and write "Run Task" and run, say, Git Pull. VSCode should the ask if you want to give permission to automatically run tasks.json
 
 ### wifi-connect.applescript
 

@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Git Pull",
+      "label": "Git pull",
       "type": "shell",
       "command": "git pull upstream develop",
       "runOptions": {
@@ -10,13 +10,22 @@
       }
     },
     {
-      "label": "Run Dev Client",
+      "label": "Install modules",
       "type": "shell",
-      "command": "npm start",
+      "command": "yarn",
       "runOptions": {
         "runOn": "folderOpen"
       },
-      "dependsOn": ["Git Pull"]
+      "dependsOn": ["Git pull"]
+    },
+    {
+      "label": "Run Dev Client",
+      "type": "shell",
+      "command": "yarn start",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "dependsOn": ["Git pull", "Install modules"]
     }
   ]
 }
