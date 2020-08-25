@@ -12,7 +12,7 @@
     {
       "label": "Install modules",
       "type": "shell",
-      "command": "yarn",
+      "command": "npm install",
       "runOptions": {
         "runOn": "folderOpen"
       },
@@ -21,7 +21,7 @@
     {
       "label": "Run Dev Client",
       "type": "shell",
-      "command": "yarn start",
+      "command": "npm start",
       "runOptions": {
         "runOn": "folderOpen"
       },

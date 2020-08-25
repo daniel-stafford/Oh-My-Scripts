@@ -40,7 +40,7 @@ echo " $(tput setaf 3) Pushing the following commits and changes: $(tput setaf 6
 git cherry -v "$1"/develop
 echo "..."
 sleep 2
-git diff --stat --patch  --color=always upstream/develop | cat
+git diff --stat --patch  --color=always $1/develop | cat
 sleep 2
 
 git push "$1" head && echo " 😀 $(tput setaf 6)Congrats! I pushed $(tput setaf 3)$current_branch$(tput setaf 6) to your remote $1 repo!"
