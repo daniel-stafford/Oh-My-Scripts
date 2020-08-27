@@ -6,6 +6,10 @@ A collection of random scripts I've created to speed up my workflow. Feel free t
 
 Counting the number of Git commits for a user or get an overview of the number of commits for all users.
 
+### database-dump.sh
+
+Dump and copy a remote database (e.g. AWS RDS instance) to your local machine.
+
 ### dev-to-prod.sh
 
 Move a dev dependency to product dependencies.
