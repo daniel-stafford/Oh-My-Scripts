@@ -18,9 +18,9 @@ Move a dev dependency to product dependencies.
 
 Open up an iTerm with multiples panes and run commands. Useful for running full-stack projects quickly.
 
-### lidl-connect.applescript
+### airpodsconnect.applescript
 
-Connect your bluetooth headphones to your MacBook without touching the mouse!
+Connect your airpods to your MacBook without touching the mouse!
 
 ### prod-to-dev.sh
 
