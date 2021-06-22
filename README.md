@@ -10,6 +10,9 @@ Counting the number of Git commits for a user or get an overview of the number o
 
 Move a dev dependency to product dependencies.
 
+### duet.sh
+
+Script to set the arrangement of a second monitor.  In my case, I vertically align my iPad, which is running Duet.
 ### iterm-panes.applescript
 
 Open up an iTerm with multiples panes and run commands. Useful for running full-stack projects quickly.
